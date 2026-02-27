@@ -5,7 +5,7 @@ const client = new Client({
 });
 
 const TOKEN = process.env.TOKEN;
-const CHANNEL_ID = "1476856479343706183";
+const CHANNEL_ID = "1476856479075008611";
 
 client.once('ready', async () => {  // make ready callback async
     console.log(`Logged in as ${client.user.tag}!`);
@@ -29,19 +29,19 @@ client.once('ready', async () => {  // make ready callback async
         const channel = await client.channels.fetch(CHANNEL_ID);
 
         const embed = new EmbedBuilder()
-            .setTitle("🚨 Rexon Hosting Offer")
+            .setTitle("📡 Rexon Hosting Status")
             .setDescription(`
- 📈 **CPU:** ♾️
- 📟 **RAM:** ♾️
- 💾 **SSD:** ♾️
- ✨ NVME SSD with 500mps Speed.
- ✨ 8 core CPU.
- ✨ High Speed Ram.
- 💵 **At ₹60/- Per Month Only! 💵**
+🟢 **Node 1** - ONLINE  
 
-Available Till: 7 Days!
+🟢 **Node 2** - ONLINE  
+
+🟢 **Node 3** - ONLINE  
+
+✨**All Nodes Are Up!**
+
+Last Updated: Few Minutes Ago
 `)
-            .setColor("Red")
+            .setColor("Green")
             .setFooter({ text: "Rexon Hosting" })
             .setTimestamp();
 
