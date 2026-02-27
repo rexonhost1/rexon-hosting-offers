@@ -33,7 +33,9 @@ client.once('ready', async () => {
             .setTitle("📡 Rexon Hosting Status")
             .setDescription(`
 🟢 **Node 1** - ONLINE  
+
 🟢 **Node 2** - ONLINE  
+
 🟢 **Node 3** - ONLINE  
 
 ✨ **All Nodes Are Up!**
@@ -54,3 +56,4 @@ Last Updated: Few Minutes Ago
 });
 
 client.login(TOKEN);
+
