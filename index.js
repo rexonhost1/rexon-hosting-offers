@@ -1,13 +1,13 @@
 const { Client, GatewayIntentBits, EmbedBuilder, ActivityType } = require('discord.js');
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds]
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 });
 
 const TOKEN = process.env.TOKEN;
 const CHANNEL_ID = "1476856479075008611";
 
-client.once('ready', async () => {  // make ready callback async
+client.once('ready', async () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
     // Rotating statuses
@@ -24,36 +24,33 @@ client.once('ready', async () => {  // make ready callback async
         i = (i + 1) % statuses.length;
     }, 15000); // rotate every 15 seconds
 
-    // Send embed once when bot is ready
+    // Send embed + ping everyone once when bot is ready
     try {
         const channel = await client.channels.fetch(CHANNEL_ID);
 
+        // Create the embed
         const embed = new EmbedBuilder()
             .setTitle("📡 Rexon Hosting Status")
             .setDescription(`
 🟢 **Node 1** - ONLINE  
-
 🟢 **Node 2** - ONLINE  
-
 🟢 **Node 3** - ONLINE  
 
-✨**All Nodes Are Up!**
+✨ **All Nodes Are Up!**
 
 Last Updated: Few Minutes Ago
-||@everyone @here||
 `)
             .setColor("Green")
             .setFooter({ text: "Rexon Hosting" })
             .setTimestamp();
 
-        await channel.send({ embeds: [embed] });
+        // Send message with embed AND ping @everyone
+        await channel.send({ content: "@everyone @here", embeds: [embed] });
+
+        console.log("Status embed sent with ping!");
     } catch (err) {
         console.error("Failed to send embed:", err);
     }
 });
 
 client.login(TOKEN);
-
-
-
-
