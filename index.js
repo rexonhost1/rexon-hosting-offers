@@ -30,19 +30,23 @@ client.once('ready', async () => {
 
         // Create the embed
         const embed = new EmbedBuilder()
-            .setTitle("📡 Rexon Hosting Status")
+            .setTitle("🚨 Rexon Hosting Offer!")
             .setDescription(`
-🟢 **Node 1** - ONLINE  
+**📈 CPU: ♾️
 
-🟢 **Node 2** - ONLINE  
+📟 RAM: ♾️
 
-🟢 **Node 3** - ONLINE  
+💾 SSD: ♾️**
 
-✨ **All Nodes Are Up!**
+• ✨ NVME SSD with 500mps Speed.
+• ✨ 8 core CPU.
+• ✨ High Speed Ram.
 
-Last Updated: Few Minutes Ago
+**💵 At ₹60/- Per Month Only! 💵**
+
+Available Till: 7 Days!
 `)
-            .setColor("Green")
+            .setColor("Red")
             .setFooter({ text: "Rexon Hosting" })
             .setTimestamp();
 
@@ -56,4 +60,5 @@ Last Updated: Few Minutes Ago
 });
 
 client.login(TOKEN);
+
 
