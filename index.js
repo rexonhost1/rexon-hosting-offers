@@ -40,6 +40,7 @@ client.once('ready', async () => {  // make ready callback async
 ✨**All Nodes Are Up!**
 
 Last Updated: Few Minutes Ago
+||@everyone @here||
 `)
             .setColor("Green")
             .setFooter({ text: "Rexon Hosting" })
@@ -52,6 +53,7 @@ Last Updated: Few Minutes Ago
 });
 
 client.login(TOKEN);
+
 
 
 
