@@ -5,7 +5,7 @@ const client = new Client({
 });
 
 const TOKEN = process.env.TOKEN;
-const CHANNEL_ID = "1476856479075008611";
+const CHANNEL_ID = "1476992756009271377";
 
 client.once('ready', async () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -60,5 +60,6 @@ Available Till: 7 Days!
 });
 
 client.login(TOKEN);
+
 
 
