@@ -32,10 +32,12 @@ client.once('ready', async () => {  // make ready callback async
             .setTitle("📡 Rexon Hosting Status")
             .setDescription(`
 🟢 **Node 1** - ONLINE  
-🟢 **Node 2** - ONLINE  
-🟢 **Node 3** - ONLINE  
 
-Last Updated: Just Now
+🟢 **Node 2** - ONLINE  
+
+🟡 **Node 3** - EMPTY  
+
+Last Updated: Few Minutes Ago
 `)
             .setColor("Green")
             .setFooter({ text: "Rexon Hosting" })
@@ -48,3 +50,4 @@ Last Updated: Just Now
 });
 
 client.login(TOKEN);
+
