@@ -35,7 +35,7 @@ client.once('ready', async () => {  // make ready callback async
 
 🟢 **Node 2** - ONLINE  
 
-🟡 **Node 3** - EMPTY  
+🟢 **Node 3** - ONLINE  
 
 Last Updated: Few Minutes Ago
 `)
@@ -50,4 +50,5 @@ Last Updated: Few Minutes Ago
 });
 
 client.login(TOKEN);
+
 
