@@ -39,7 +39,7 @@ client.once('ready', async () => {
 💾 SSD: ♾️**
 
 • ✨ NVME SSD with 500mps Speed.
-• ✨ 8 core CPU.
+• ✨ 8v core CPU.
 • ✨ High Speed Ram.
 
 **💵 At ₹60/- Per Month Only! 💵**
@@ -60,6 +60,7 @@ Available Till: 7 Days!
 });
 
 client.login(TOKEN);
+
 
 
 
