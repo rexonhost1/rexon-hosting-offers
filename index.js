@@ -30,7 +30,7 @@ client.once('ready', async () => {
 
         // Create the embed
         const embed = new EmbedBuilder()
-            .setTitle("🚨 Rexon Hosting Offer!")
+            .setTitle("__🚨 Rexon Hosting Offer!__")
             .setDescription(`
 **📈 CPU: ♾️
 
@@ -60,6 +60,7 @@ Available Till: 7 Days!
 });
 
 client.login(TOKEN);
+
 
 
 
